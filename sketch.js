@@ -63,8 +63,7 @@ function draw(){
 
     bird.display();
     platform.display();
-    //log6.display();
-    slingshot.display();    
+    slingshot.display();  
 }
 
 function mouseDragged(){
@@ -74,4 +73,12 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    //ascii value for the space key is '32'
+    if(keyCode ===32){
+        console.log(bird.body);
+        slingshot.attatched(bird.body);
+    }
 }
